@@ -36,12 +36,38 @@ namespace Project1
             for (int i = 0; i < score.Length; i++)
             {
                 // prompting to fill the 10 elements 
-                Console.Write("Array slot #" + i+1 + ":  ");
+                Console.Write("Array slot #" + (i+1) + ":  ");
                 score[i] = double.Parse(Console.ReadLine());
             }
             // Alerting the array has been filled 
             Console.WriteLine("The array has been filled ( Press Enter) ");
 
+            Console.ReadLine();
+
+            // creating new array
+            double[] newScore = new double[score.Length];
+
+            //copying the contents to a new array 
+            for(int x = 0; x < newScore.Length; x++)
+            {
+                newScore[x] = score[x];
+            }
+
+            // printing out both arrays to see if they match.
+            foreach(double element in score)
+            {
+                Console.Write(element + ", ");
+            }
+            // creating seperation 
+            Console.WriteLine("\n");
+
+            // printing out both arrays to see if they match.
+            foreach (double element in newScore)
+            {
+                Console.Write(element + ", ");
+            }
+
+            // pausing program
             Console.ReadLine();
         }
     }
